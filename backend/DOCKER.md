@@ -12,7 +12,7 @@ SUPABASE_ANON_KEY=your_anon_key
 SUPABASE_SERVICE_ROLE_KEY=your_service_role_key
 GEMINI_API_KEY=your_gemini_api_key
 DATABASE_URL=postgresql://postgres:postgres@postgres:5432/chumail_db
-PORT=5000
+PORT=5005
 NODE_ENV=production
 ```
 
@@ -48,7 +48,7 @@ npm run docker:build
 ```bash
 docker run -d \
   --name chumail-backend \
-  -p 5000:5000 \
+  -p 5005:5005 \
   --env-file .env \
   chumail-backend
 ```
@@ -75,7 +75,7 @@ Required environment variables:
 - `SUPABASE_SERVICE_ROLE_KEY` - Supabase service role key
 - `GEMINI_API_KEY` - Google Gemini API key
 - `DATABASE_URL` - PostgreSQL connection string
-- `PORT` - Server port (default: 5000)
+- `PORT` - Server port (default: 5005)
 - `NODE_ENV` - Environment (production/development)
 
 ## Health Check

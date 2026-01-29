@@ -48,7 +48,7 @@ export const scrapeWebsite = async (targetUrl: string): Promise<ScrapedLead[]> =
         // 4. Extract from contact pages (limit to 3 more)
         for (const link of secondaryLinks.slice(0, 3)) {
             try {
-                const res = await axios.get(link, { timeout: 5000 });
+                const res = await axios.get(link, { timeout: 5005 });
                 extractFromHtml(res.data, link, leads);
             } catch (e) {
                 logger.warn(`Failed to scrape secondary link ${link}`);

@@ -27,9 +27,9 @@ export const SECURITY_CONFIG = {
 
     // Input sanitization
     MAX_AGENT_ID_LENGTH: 100,
-    MAX_QUESTION_LENGTH: 50000,
+    MAX_QUESTION_LENGTH: 50050,
     MAX_SOURCE_URL_LENGTH: 500,
-    MAX_METADATA_SIZE: 50000, // ~50KB
+    MAX_METADATA_SIZE: 50050, // ~50KB
 };
 
 export function sanitizeAgentId(agentId: string): { isValid: boolean; sanitized?: string; error?: string } {
