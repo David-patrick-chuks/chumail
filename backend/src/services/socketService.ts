@@ -34,9 +34,10 @@ export const initSocket = (server: HttpServer) => {
                 } else {
                     socket.emit('ADMIN_SYNC_ERROR', { error: 'Unauthorized' });
                 }
-            } catch (err) {
-                logger.error('Socket Admin Join Error:', err);
+            } catch (err: any) {
+                logger.error('Socket Admin Join Error:', err.message || err);
             }
+
         });
 
 
